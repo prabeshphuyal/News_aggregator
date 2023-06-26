@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Post 
+from rest_framework.response import Response
 
 def news_list(request, category=None):
     if category:
@@ -14,5 +15,4 @@ def search_query(request):
     posts = Post.objects.filter(heading__icontains=query) if query else []
     context = {'posts': posts, 'query': query}
     return render(request, 'news_list.html', context)
-
 

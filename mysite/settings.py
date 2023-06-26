@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django_extensions",
     "newswebsite",
     "django_crontab",
+    'rest_framework',
 ]
 CRONJOBS = [
     ('* * * * *', 'newswebsite.cron.my_cron_job')
