@@ -9,5 +9,4 @@ urlpatterns = [
     path('search', search_query, name='search'),
     path('api/posts/', PostListAPIView.as_view(), name='post-list'),
     path('api/posts/<int:pk>/', PostDetailAPIView.as_view(), name='post-detail'),
-    
 ]
